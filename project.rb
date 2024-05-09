@@ -11,6 +11,7 @@ unpredictable_inputs = [
 
 some_random_input = unpredictable_inputs.sample
 # write your program below
+
  some_random_input.each do |thing|
   prompts = thing.split("")
     if prompts.class == String
@@ -19,7 +20,7 @@ some_random_input = unpredictable_inputs.sample
       prompts.class == Integer
       if prompts.even?
         pp "#{prompts} is even"
-      else prompts odd?
+      else 
         pp "#{prompts} is odd"
       end
     elsif
@@ -27,9 +28,9 @@ some_random_input = unpredictable_inputs.sample
       pp "no object provided"
     elsif 
       prompts.class == Time
-      pp Time.now.strftime("%A").downcase 
-    # elsif 
-    #   prompts.class == Symbol
+      pp prompts.strftime("%A").downcase 
+    elsif 
+      prompts.class == Symbol
       pp "#{prompts}".downcase
     elsif 
       prompts == true
@@ -37,8 +38,9 @@ some_random_input = unpredictable_inputs.sample
     elsif 
       prompts == false
       pp "you may not pass"
-    else
+    elsif 
+      prompts == Hash
       pp prompts.keys
   end
- end
+end
 pp some_random_input
