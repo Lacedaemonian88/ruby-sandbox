@@ -8,12 +8,12 @@ sentence = sentences.sample
 
 
 #split and isolate
-# le_word = sentence.split
-# num = sentence.gsub(/-/, '').scan(/\bthe\b/).length
-# #count
-# #pp
-# pp le_word
-# pp "'the' appeared #{num} times"
+ le_word = sentence.split
+#count
+ num = sentence.gsub(/-/, '').scan(/\bthe\b/).length
+ #pp
+ pp le_word
+pp "'the' appeared #{num} times"
 
 
 num = 0
