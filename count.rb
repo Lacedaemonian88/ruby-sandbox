@@ -8,9 +8,19 @@ sentence = sentences.sample
 
 
 #split and isolate
-le_word = sentence.split
-num = sentence.gsub(/-/, '').scan(/\bthe\b/).length
-#count
-#pp
-pp le_word
-pp "'the' appeared #{num} times"
+# le_word = sentence.split
+# num = sentence.gsub(/-/, '').scan(/\bthe\b/).length
+# #count
+# #pp
+# pp le_word
+# pp "'the' appeared #{num} times"
+
+
+num = 0
+le_word = "the"
+
+sentence.split.each do |word|
+  num += 1 if word.gsub(/\W/, '') == le_word
+end
+pp sentence
+pp "#{le_word} appeared #{num} times"
